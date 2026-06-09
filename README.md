@@ -21,5 +21,3 @@ Install the required libraries first if needed:
 ```bash
 pip install numpy matplotlib
 ```
-
-Pass `--show` to open an interactive window, or use `--output` to save an image.
