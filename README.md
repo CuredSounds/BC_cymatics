@@ -15,4 +15,4 @@ Install the required libraries first if needed:
 pip install numpy matplotlib
 ```
 
-Use `--show` to open an interactive window instead of only saving the image.
+Pass `--show` to open an interactive window, or use `--output` to save an image.

@@ -51,6 +51,9 @@ def parse_args():
 
 def main():
     args = parse_args()
+    if not args.show and not args.output:
+        raise SystemExit("Use --show to display the figure or --output to save it.")
+
     pattern = generate_chladni_pattern(
         args.n_mode,
         args.m_mode,
@@ -59,7 +62,7 @@ def main():
         resolution=args.resolution,
     )
 
-    figure = plt.figure(figsize=(8, 8), facecolor="black")
+    fig = plt.figure(figsize=(8, 8), facecolor="black")
     plt.imshow(pattern, cmap=args.cmap, extent=[0, 1, 0, 1])
     plt.axis("off")
     plt.title(
@@ -70,9 +73,9 @@ def main():
 
     if args.output:
         args.output.parent.mkdir(parents=True, exist_ok=True)
-        figure.savefig(args.output, bbox_inches="tight", facecolor=figure.get_facecolor())
+        fig.savefig(args.output, bbox_inches="tight", facecolor=fig.get_facecolor())
 
-    if args.show or not args.output:
+    if args.show:
         plt.show()
 
 
