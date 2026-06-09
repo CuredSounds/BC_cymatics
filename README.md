@@ -6,7 +6,7 @@ This repository includes a small Python script for generating cymatic-like
 visuals with a square Chladni plate model:
 
 ```bash
-python /home/runner/work/BC_cymatics/BC_cymatics/CuredSounds/BC_cymatics/chladni_pattern.py --output /tmp/chladni.png
+python chladni_pattern.py --output output/chladni.png
 ```
 
 Install the required libraries first if needed:
