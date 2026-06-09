@@ -9,6 +9,13 @@ visuals with a square Chladni plate model:
 python chladni_pattern.py --output output/chladni.png
 ```
 
+The command above saves an image without opening a window. For an interactive
+preview instead:
+
+```bash
+python chladni_pattern.py --show
+```
+
 Install the required libraries first if needed:
 
 ```bash
